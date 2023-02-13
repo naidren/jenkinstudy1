@@ -10,8 +10,8 @@ import sys
 
 if __name__ == '__main__':
 
-    content = sys.argv[1]
-    write_today_content(content)
+    # content = sys.argv[1]
+    write_today_content()
 
 
 

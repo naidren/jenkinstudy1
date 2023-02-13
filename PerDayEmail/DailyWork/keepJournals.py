@@ -10,7 +10,7 @@
 # ---
 from CommonFunc.getTime import TimeHelp
 import random,sys
-def write_today_content(content_action=None):
+def write_today_content(content_action="测试"):
     time_help = TimeHelp()
     day_time = time_help.get_day_nowtime()
     week_day = time_help.get_week_day()
