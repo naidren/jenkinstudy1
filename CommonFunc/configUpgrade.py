@@ -39,8 +39,10 @@ def get_driver_version(brower_version:str):
                     return all_version[i-1]
 
 def upgrade_driver(google_path=None,python_path=None):
-    google_path = r"C:\Program Files\Google\Chrome\Application"
-    python_path = r"C:\Users\86166\AppData\Local\Programs\Python\Python38"
+    if google_path is None:
+        google_path = r"C:\Program Files\Google\Chrome\Application"
+    if python_path is None:
+        python_path = r"C:\Users\86166\AppData\Local\Programs\Python\Python38"
     zip_file = python_path + "\\" + "chromedriver_win32.zip"
     driver_file = python_path + "\\" + "chromedriver.exe"
     # 先删除压缩包文件

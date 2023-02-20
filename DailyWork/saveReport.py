@@ -60,6 +60,8 @@ class DailyTool:
         task_list = TextHelp().read_all_file(path=path).split("\n")
         # yaml文件请求体
         input_data = self.env_data["save_param_single"]
+        # 提交日期
+        input_data["workingHourDate"]=self.today_date
         # 获取yaml文件每天任务信息
         task_content = self.env_data["work_content"]
         # 先去掉subjectWorkingHours在yaml文件的None内容

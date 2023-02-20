@@ -297,11 +297,14 @@ def count(d):
 
 def dict_test(d):
 
-    for v in d.values():
+    # for k,v in d.values():
+    for k,v in d.items():
         # print(v)
         if isinstance(v,dict):
             # return max(count(v))+1
             print(dict_test(v))
+
+            print(k,v)
         else:
             return 0
 
@@ -313,7 +316,8 @@ if __name__ == '__main__':
         "tuple":("3",5,1),
         "list":[2,4,1],
     }
-    print(data1.get("writedata2").get("line1"))
+    print(dict_test(data1))
+    # print(data1.get("writedata2").get("line1"))
     # tuple1 = (8,8,8)
     # list1 = [9,9,9]
     # data2 = {"data":tuple1}
