@@ -41,7 +41,7 @@ class yamlHelp(object):
         """
         with open(file=file_path,encoding='utf-8') as f:
             yaml_content = yaml.safe_load(f)
-            yaml.load()
+            # yaml.safe_load(f)
             return yaml_content
 
     def yaml_write(self,file_path,data):
@@ -57,7 +57,29 @@ class yamlHelp(object):
             yaml.dump(data, stream=f, allow_unicode=True)
 
 class TextHelp(object):
-    pass
+    def read_one_line(self,path):
+        """
+        以行的形式读取，返回str
+        """
+        with open(file=path,mode='r',encoding='utf-8') as f:
+            content = f.read()
+            return content
+
+    def read_multi_lines(self,path):
+        """
+        读取出所有行，返回list:[line1,line2]
+        """
+        with open(file=path,mode='r',encoding='utf-8') as f:
+            content = f.readlines()
+            return content
+
+    def read_all_file(self,path):
+        """
+        读取text文本所有内容,返回str
+        """
+        with open(path, 'r', encoding="utf-8") as f:
+            content = f.read()
+            return content
 
 class ExcelHelp:
     def __init__(self,excel_file):
@@ -311,4 +333,7 @@ if __name__ == '__main__':
     #         else:
     #             pass
 
-    test1(data1)
+    txt_help = TextHelp()
+    txt_path = r"C:\\Users\\86166\\Desktop\\每日任务.txt"
+    content = txt_help.read_all_file(txt_path)
+    print(content)

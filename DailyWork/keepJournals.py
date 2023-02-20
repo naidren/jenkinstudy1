@@ -22,6 +22,7 @@ def write_today_content(content_action="测试"):
     with open("日记{0}.txt".format(time_help.get_str_nowtime()),"w+") as f:
         f.write(content_all)
 
+
 if __name__ == '__main__':
     content = sys.argv[1]
     write_today_content(content)

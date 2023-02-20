@@ -47,10 +47,11 @@ class TimeHelp(object):
         day_tuple = ("星期一","星期二","星期三","星期四","星期五","星期六","星期天")
         return day_tuple[datetime.today().weekday()]
 
+
 if __name__ == '__main__':
     # now_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     # l2 = now_time.replace(now_time[0:4], str(2022))
     # print(l2)
-    print(TimeHelp.get_second_nowtime())
+    # print(TimeHelp.get_second_nowtime())
     # now_time.replace('%d')
     print(TimeHelp.get_week_day())
