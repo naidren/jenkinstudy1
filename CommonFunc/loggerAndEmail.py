@@ -114,7 +114,7 @@ class EmailHElp:
         smtp.close()
         print('发送邮件成功！')
 
-# if __name__ == '__main__':
-#
-#     data1 = yamlHelp().yaml_read(r"F:\projectcodes\pwd\mail163.yml")
-#     print(data1["email_pwd"])
+if __name__ == '__main__':
+
+    data1 = yamlHelp().yaml_read(r"F:\projectcodes\pwd\mail163.yml")
+    print(data1["email_pwd"])

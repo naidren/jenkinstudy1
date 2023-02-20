@@ -32,6 +32,7 @@ class CsvHelp:
                 col_data = list()
                 all_data.append(ele)
         return all_data
+
 class yamlHelp(object):
     def yaml_read(self,file_path):
         """
@@ -294,13 +295,13 @@ def count(d):
     # 获取嵌套字典的层数
     return max(count(v) if isinstance(v,dict) else 0 for v in d.values()) + 1
 
-def test1(d):
+def dict_test(d):
 
     for v in d.values():
         # print(v)
         if isinstance(v,dict):
             # return max(count(v))+1
-            print(test1(v))
+            print(dict_test(v))
         else:
             return 0
 
@@ -312,6 +313,7 @@ if __name__ == '__main__':
         "tuple":("3",5,1),
         "list":[2,4,1],
     }
+    print(data1.get("writedata2").get("line1"))
     # tuple1 = (8,8,8)
     # list1 = [9,9,9]
     # data2 = {"data":tuple1}
@@ -333,7 +335,7 @@ if __name__ == '__main__':
     #         else:
     #             pass
 
-    txt_help = TextHelp()
-    txt_path = r"C:\\Users\\86166\\Desktop\\每日任务.txt"
-    content = txt_help.read_all_file(txt_path)
-    print(content)
+    # txt_help = TextHelp()
+    # txt_path = r"C:\\Users\\86166\\Desktop\\每日任务.txt"
+    # content = txt_help.read_all_file(txt_path)
+    # print(content)

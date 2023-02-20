@@ -30,6 +30,6 @@ class PathHelper:
     def report_dirpath(self):
         return self.get_absolute_path("PycharmProjects\\intefaceItems\\petitionProject\\staticDatas\\ReportFile")
 
-# if __name__ == '__main__':
-#     a = PathHelper().report_dirpath()
-#     print(a)
+if __name__ == '__main__':
+    a = PathHelper().report_dirpath()
+    print(a)
