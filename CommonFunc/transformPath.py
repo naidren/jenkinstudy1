@@ -20,15 +20,19 @@ class PathHelper:
         '''
         # 获取项目名称
         project_name = file_path.split('\\')[0]
+        # print("文件的路径："+file_path)
+        # print("项目名称："+project_name)
+        # print("当前文件路径："+os.path.dirname(__file__))
+
         # 获取项目名称之前的路径
         path_beforce_project_name = os.path.dirname(__file__).split(project_name)[0]
         # 拼接成绝对路径
-        all_path = path_beforce_project_name + file_path
+        all_path = path_beforce_project_name + "\\"+file_path
         return all_path
 
 
     def report_dirpath(self):
-        return self.get_absolute_path("PycharmProjects\\intefaceItems\\petitionProject\\staticDatas\\ReportFile")
+        return self.get_absolute_path("JenkinsBuildTask\\DailyWork\\recordWorkReport.py")
 
 if __name__ == '__main__':
     a = PathHelper().report_dirpath()
